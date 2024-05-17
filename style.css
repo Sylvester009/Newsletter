@@ -1,0 +1,188 @@
+@import url();
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  color: var(--CharcoalGrey);
+}
+
+.Sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.image-division {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-mobile {
+  margin: 0 auto;
+}
+
+.sign-up-desktop {
+  display: none;
+}
+
+.text-division {
+  padding: 30px;
+}
+
+.title {
+  color: var(--CharcoalGrey);
+  font-weight: 700;
+  font-size: 40px;
+  padding-bottom: 15px;
+}
+
+.text,
+.list-text {
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icon-list {
+  width: 20px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.form-division {
+  padding-top: 15px;
+}
+
+.label {
+  display: flex;
+  padding-bottom: 10px;
+  color: var(--DarkSlateGrey);
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-text2 {
+  text-align: end;
+}
+
+.email {
+  padding: 15px 30px;
+  color: var(--Grey);
+  border-radius: 5px;
+  border: 1px solid var(--Grey);
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.email:hover {
+  cursor: pointer;
+}
+
+.button {
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: 1px solid var(--CharcoalGrey);
+  color: var(--White);
+  background-color: var(--CharcoalGrey);
+  font-weight: 600;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--Tomato);
+  border-color: var(--Tomato);
+}
+
+.success-message {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+}
+
+.icon-success {
+  width: 60px;
+  align-self: start;
+}
+
+.success-text span {
+  font-weight: 600;
+}
+
+#dismiss {
+  position: absolute;
+  top: 85%;
+  width: 80%;
+}
+
+@media screen and (min-width: 801px) {
+  .Sign-up {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-content: center;
+    max-height: 100vh;
+  }
+
+  .image-division {
+    padding: 5% 0px;
+  }
+
+  .sign-up-mobile {
+    display: none;
+  }
+
+  .sign-up-desktop {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    height: 90vh;
+  }
+
+  .text-division {
+    margin: 40px 0px 40px 60px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .text,
+  .list-text {
+    font-size: 20px;
+  }
+
+  .success-message {
+    padding: 9% 30%;
+  }
+
+  #dismiss {
+    position: static;
+    top: 0;
+    width: 100%;
+  }
+}
